@@ -60,7 +60,7 @@ int main(){
             }
         }
 
-        if(cnt >= 2){ // 분리 발
+        if(cnt >= 2){ // 분리 발생
             cout << res;
             break;
         } else if (cnt == 0){ // 모든 좌표가 0 -> 끝까지 분리되지 않음
@@ -75,7 +75,7 @@ int main(){
                         int ni = i + dx[a];
                         int nj = j + dy[a];
                         if(ni < 0 || nj < 0 || ni >= n || nj >= m) continue;
-                        if(map[ni][nj] <= 0){
+                        if(map[ni][nj] <= 0){ // 주변이 0 이하인지 확인 (2인데 3방향이 0이면 -1이므로 음수도 고려해줘야 함)
                             melt[i][j]++;
                         }
                     }
@@ -85,7 +85,7 @@ int main(){
 
         for(int i=0; i<n; i++){
             for(int j=0; j<m; j++){
-                map[i][j] -= melt[i][j];
+                map[i][j] -= melt[i][j]; // 녹이기
             }
         }
         res++;
