@@ -3,6 +3,19 @@
 using namespace std;
 int n, k;
 long long dp[201][201] = { 0, }; // k개의 숫자로 n을 만드는 경우의 수를 저장
+long long dpT[201][201] = { 0, }; // Top-Down 전용
+
+long long solve(int k, int n){ // Top-Down
+    if(n == 0 || k == 1) return 1;
+    if(dpT[k][n] == 0){
+        for(int i=n; i>=0; i--){
+            dpT[k][n] += solve(k-1, i);
+            dpT[k][n] = dpT[k][n] % 1000000000;
+        }
+    }
+    return dpT[k][n];
+}
+
 
 int main(){
     cin >> n >> k;
@@ -11,7 +24,7 @@ int main(){
         dp[1][i] = 1; // 1개로 i를 만드는 경우의 수는 무조건 1
     }
 
-    for(int i=2; i<=k; i++){
+    for(int i=2; i<=k; i++){ // Bottom-Up
         for(int j=0; j<=n; j++){
             for(int a=0; a<=j; a++){
                 dp[i][j] += dp[i-1][a]; // 점화식 반영
@@ -20,7 +33,8 @@ int main(){
         }
     }
 
-    cout << dp[k][n] << '\n';
+    cout << solve(k, n) << '\n';
+    // cout << dp[k][n] << '\n';
     return 0;
 }
 
