@@ -10,9 +10,9 @@ int main(){
 
     for(int i=1; i<=s1.size(); i++){ // LIS과 구도가 유사하다.
         for(int j=1; j<=s2.size(); j++){
-            if(s1[i-1] == s2[j-1]){
+            if(s1[i-1] == s2[j-1]){ // 같으면 직전에서 갱신
                 dp[i][j] = max(dp[i-1][j-1] + 1, dp[i][j]);
-            } else {
+            } else { // 다르면 직전 값 중 더 큰 것 반영
                 dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
             }
         }
