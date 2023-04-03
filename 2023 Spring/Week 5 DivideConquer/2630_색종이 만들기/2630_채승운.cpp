@@ -15,7 +15,7 @@ bool colorcheck(int r, int c, int a){ // 시작점 r, c에서 n * n 영역이 �
     return true;
 }
 
-void cp(int r, int c, int n){ // 전역변수 말고 인자로 안전하게 상황 가져가기
+void qt(int r, int c, int n){ // 전역변수 말고 인자로 안전하게 상황 가져가기
     if(colorcheck(r, c, n)){
         if(map[r][c] == 0) res[0]++;
         else res[1]++;
@@ -23,10 +23,10 @@ void cp(int r, int c, int n){ // 전역변수 말고 인자로 안전하게 상�
     }
 
     n = n / 2;
-    cp(r, c, n);
-    cp(r, c + n, n);
-    cp(r + n, c, n);
-    cp(r + n, c + n, n);
+    qt(r, c, n);
+    qt(r, c + n, n);
+    qt(r + n, c, n);
+    qt(r + n, c + n, n);
 }
 
 int main(){
@@ -37,7 +37,7 @@ int main(){
         }
     }
 
-    cp(0, 0, n);
+    qt(0, 0, n);
     cout << res[0] << '\n';
     cout << res[1] << '\n';
     return 0;

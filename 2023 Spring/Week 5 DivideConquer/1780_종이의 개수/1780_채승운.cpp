@@ -15,7 +15,7 @@ bool colorcheck(int r, int c, int a){ // 시작점 r, c에서 n * n 영역이 �
     return true;
 }
 
-void cp(int r, int c, int n){
+void qt(int r, int c, int n){
     if(colorcheck(r, c, n)){
         if(map[r][c] == -1) res[0]++;
         else if(map[r][c] == 0) res[1]++;
@@ -23,15 +23,15 @@ void cp(int r, int c, int n){
     } else {
         n /= 3; // 색종이 만들기 문제와 동일한 패턴
 
-        cp(r, c, n);
-        cp(r, c + n, n);
-        cp(r, c + 2 * n, n);
-        cp(r + n, c, n);    
-        cp(r + n, c + n, n);
-        cp(r + n, c + 2 * n, n);
-        cp(r + 2 * n, c, n);        
-        cp(r + 2 * n, c + n, n);            
-        cp(r + 2 * n, c + 2 * n, n);            
+        qt(r, c, n);
+        qt(r, c + n, n);
+        qt(r, c + 2 * n, n);
+        qt(r + n, c, n);    
+        qt(r + n, c + n, n);
+        qt(r + n, c + 2 * n, n);
+        qt(r + 2 * n, c, n);        
+        qt(r + 2 * n, c + n, n);            
+        qt(r + 2 * n, c + 2 * n, n);            
     }
 }
 
@@ -43,7 +43,7 @@ int main(){
         }
     }
 
-    cp(0, 0, n);
+    qt(0, 0, n);
     cout << res[0] << '\n'; // -1로 채워진 종이의 개수
     cout << res[1] << '\n'; // 0
     cout << res[2] << '\n'; // 1
