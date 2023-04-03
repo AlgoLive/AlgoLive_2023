@@ -16,7 +16,7 @@ bool colorcheck(int r, int c, int a){ // 시작점 r, c에서 n * n 영역이 �
 }
 
 void cp(int r, int c, int n){ // 전역변수 말고 인자로 안전하게 상황 가져가기
-    if(colorcheck(r, c, n)){ 
+    if(colorcheck(r, c, n)){
         if(map[r][c] == 0) res[0]++;
         else res[1]++;
         return;
