@@ -18,3 +18,5 @@ for i in range(1, N):
     for j in range(K):
         if weight_value[i][0] < K:
             dp[i][j] = weight_value[i][1]
+            
+print(dp[N][K])            
