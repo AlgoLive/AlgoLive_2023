@@ -72,23 +72,6 @@
     </tr>
     <tr>
       <td align="center">
-        <a href="https://github.com/AlgoLive/AlgoLive_Session/commits?author=dongwxxkchoi">
-          <img src="https://avatars.githubusercontent.com/u/68775148?v=4" width="100px" alt=""/>
-          <br />
-          <sub>
-            <b>dongwxxkchoi</b>
-          </sub>
-        </a>
-        <br />
-      </td>
-      <td>
-        <a href="https://solved.ac/dwchoi0610">
-          <img width="175px" src="https://mazassumnida.wtf/api/v2/generate_badge?boj=dwchoi0610">
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
         <a href="https://github.com/AlgoLive/AlgoLive_Session/commits?author=euije">
           <img src="https://avatars.githubusercontent.com/u/12531340?v=4" width="100px" alt=""/>
           <br />
@@ -118,6 +101,23 @@
       <td>
         <a href="https://solved.ac/k424">
           <img width="175px" src="https://mazassumnida.wtf/api/v2/generate_badge?boj=k424">
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/AlgoLive/AlgoLive_Session/commits?author=dongwxxkchoi">
+          <img src="https://avatars.githubusercontent.com/u/68775148?v=4" width="100px" alt=""/>
+          <br />
+          <sub>
+            <b>dongwxxkchoi</b>
+          </sub>
+        </a>
+        <br />
+      </td>
+      <td>
+        <a href="https://solved.ac/dwchoi0610">
+          <img width="175px" src="https://mazassumnida.wtf/api/v2/generate_badge?boj=dwchoi0610">
         </a>
       </td>
     </tr>
