@@ -4,11 +4,11 @@
   <tbody>
     <tr>
       <td align="center">
-        <a href="https://github.com/AlgoLive/AlgoLive_Session/commits?author=chaso1495">
+        <a href="https://github.com/AlgoLive/AlgoLive_Session/commits?author=win-luck">
           <img src="https://avatars.githubusercontent.com/u/53044069?s=64&v=4" width="100px" alt=""/>
           <br />
           <sub>
-            <b>chaso1495</b>
+            <b>win-luck</b>
           </sub>
         </a>
         <br />
